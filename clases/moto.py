@@ -61,26 +61,26 @@ class Moto:
         self.AñoPatentamiento = añoPatentamiento
       
   def __str__(self):
-    return('La marca de la moto es: ' + self.Marca + ' modelo ' + self.Modelo + ' su patente es ' + self.Patente + ' y el kilometraje es de: ' + str(self.Kilometraje) + 'su color es: ' + self.Color + 'y el año de patentamiento es: ' + str(self.AñoPatentamiento) + 'y la capacidad de tanque es: ' + str(self.CapacidadDeTanque))
+    return('La marca de la moto es: ' + self.Marca + ' modelo ' + str(self.Modelo) + ' su patente es ' + str(self.Patente) + ' y el kilometraje es de: ' + str(self.Kilometraje) + 'su color es: ' + self.Color + ' y el año de patentamiento es: ' + str(self.AñoPatentamiento) + ' y la capacidad de tanque es: ' + str(self.CapacidadDeTanque))
   
-marca= input('Ingrese la marca de la moto.')
-modelo= input('Ingrese el modelo de la moto.')
-patente= input('Ingrese la patente de la moto.')
-kilometraje= input('Ingrese el kilometraje de la moto.')
+# marca= input('Ingrese la marca de la moto.')
+# modelo= input('Ingrese el modelo de la moto.')
+# patente= input('Ingrese la patente de la moto.')
+# kilometraje= input('Ingrese el kilometraje de la moto.')
 
-def MotosConMenosDe1000km(self):
-  for i in zip(self):
-    if(self.kilometraje < 1000):
-      menos1000km = menos1000km + 1
-  return menos1000km
+# def MotosConMenosDe1000km(self):
+#   for i in zip(self):
+#     if(self.kilometraje < 1000):
+#       menos1000km = menos1000km + 1
+#   return menos1000km
 
-def Patentes2021(self):
+# def Patentes2021(self):
         
-  for i in zip(self):
-    if(self.añoPatentamiento == 2021):
-      patentadasEn2021= patentadasEn2021 + 1      
-  return patentadasEn2021
+#   for i in zip(self):
+#     if(self.añoPatentamiento == 2021):
+#       patentadasEn2021= patentadasEn2021 + 1      
+#   return patentadasEn2021
 
-miMoto= Moto(marca,modelo,patente,kilometraje)
+# miMoto= Moto(marca,modelo,patente,kilometraje)
 
-print(miMoto)
+# print(miMoto)
