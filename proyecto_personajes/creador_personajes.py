@@ -77,11 +77,48 @@ class Personaje():
         pjs = data['personajes_creados']
         archivo = open('Personajes.json', 'w')
         json.dump(pjs, archivo, indent=4)
+    
+    def cargarPersonajes(self):
+        try:
+            archivo = open('Personajes.json')
+            data['personajes_creados'] = json.load(archivo)
+        except FileNotFoundError:
+            print("\nCreando registro de personajes...")
+            time.sleep(1)
+            archivo = open('Personajes.json', 'a+')
+        except json.decoder.JSONDecodeError:
+            print("\nNo hay personajes creados, crea nuevos personajes a partir de ahora;D")
 
+    def interfaz(self):
+        i=0
+        while True:
+            print("""\n=== Bienvenido al creador de personajes, humanos y orcos ===\n
+                  ¿Que deseas hacer?\n
+                  1) Crear un personaje
+                  2) Ver los personajes creados
+                  3) Salir del programa\n""")
+            opcion=input("> ")
+            if opcion == '1':
+                self.configurarPersonaje()
+            elif opcion == '2':
+                if data['personajes_creados'] == []:
+                    print("\nNo se han encontrado personajes")
+                for personaje in data['personajes_creados']:
+                    print("""\nID: {}
+                          Nombre: {}
+                          Raza: {}
+                          Clase: {}
+                          Vida: {}
+                          Mana: {}\n""".format(personaje['id'],personaje['Nombre'],personaje['Raza'],personaje['Clase'],personaje['Vida'],personaje['Mana']))
+            elif opcion == '3':
+                print("\nGracias por usar el programa;") 
+                time.sleep(2)
+                quit()
+            else:
+                print("\nHas introducido un comando inválido")       
 class Iniciar(Personaje):
     def __init__(self):
-        self.configurarPersonaje()
-
+        self.cargarPersonajes()
+        self.interfaz()
 Iniciar()
-print(data['personajes_creados'])
 

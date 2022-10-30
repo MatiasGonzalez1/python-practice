@@ -1,7 +1,23 @@
 [
     {
-        "id": "99fc7c3d-4ca1-47f4-8d69-1a49691037e5",
-        "Nombre": "Matias",
+        "id": "87063caa-8950-49da-b816-1d7daae7b1ee",
+        "Nombre": "Osvaldo",
+        "Raza": "Orcos",
+        "Clase": "Guerrero",
+        "Vida": "1350",
+        "Mana": "425"
+    },
+    {
+        "id": "a8d66471-0668-48d2-9a44-f1bf0e4cbab4",
+        "Nombre": "Azarith",
+        "Raza": "Humanos",
+        "Clase": "Mago",
+        "Vida": "975",
+        "Mana": "1100"
+    },
+    {
+        "id": "d1266aec-df24-4871-b20c-49bd2b519d7a",
+        "Nombre": "Memw",
         "Raza": "Humanos",
         "Clase": "Guerrero",
         "Vida": "1200",
