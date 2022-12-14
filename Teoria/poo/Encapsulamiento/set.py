@@ -19,6 +19,10 @@ class A():
   @property
   def contador(self):
     return self._contador
+  
+  @contador.setter
+  def contador(self, contador):
+    self._contador = contador
   # def incrementar(self):
   #   self._contador += 1
   
@@ -27,4 +31,6 @@ class A():
   
 a = A()
 print(a.cuenta, a.contador)
+a.cuenta = 20
+print(a.cuenta)
     
